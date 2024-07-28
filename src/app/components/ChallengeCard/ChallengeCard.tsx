@@ -1,3 +1,5 @@
+import CounterButton from "../CounterButton/CounterButton";
+
 const colorClasses: Record<string, string> = {
   green: "bg-green-600",
   yellow: "bg-yellow-600",
@@ -9,21 +11,19 @@ export default function ChallengeCard({
   color,
   goal,
   task,
-  tier,
   tip,
 }: {
   challenge: string;
   color: string;
   goal: string;
   task: string;
-  tier: string;
   tip: string;
 }) {
   const backgroundColor = colorClasses[color];
 
   return (
     <section className={`flex flex-col gap-4 ${backgroundColor} p-4`}>
-      <div>
+      <div className="flex flex-col gap-2">
         <p className="text-white">
           <span className="font-bold text-white">Challenge: </span>
           {challenge}
@@ -41,7 +41,9 @@ export default function ChallengeCard({
           {tip}
         </p>
       </div>
-      <div className="border bg-white p-2 text-center font-bold">{tier}</div>
+      <div className="flex justify-end">
+        <CounterButton icon="square-check" text="Complete" />
+      </div>
     </section>
   );
 }
