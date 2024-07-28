@@ -26,7 +26,7 @@ export default function ChallengeCard({
         <div className="flex gap-4">
           <i className="fa-regular fa-thumbs-up cursor-pointer"></i>
           <i className="fa-regular fa-thumbs-down cursor-pointer"></i>
-          <i className="fa-regular fa-heart cursor-pointer"></i>
+          <i className="fa-regular fa-square-check cursor-pointer"></i>
         </div>
       </div>
       <p>{challenge}</p>
