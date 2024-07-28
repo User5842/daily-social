@@ -18,15 +18,15 @@ export default function ChallengeCard({
   const backgroundColor = colorClasses[color];
 
   return (
-    <div className="container flex flex-col justify-between border border-black rounded p-2 gap-4">
+    <div className="container flex flex-col justify-between gap-4 rounded border border-black p-2">
       <div
-        className={`flex justify-between items-center ${backgroundColor} p-2`}
+        className={`flex items-center justify-between ${backgroundColor} p-2`}
       >
         <h3 className="font-bold">{tier}</h3>
         <div className="flex gap-4">
-          <i className="cursor-pointer fa-regular fa-thumbs-up"></i>
-          <i className="cursor-pointer fa-regular fa-thumbs-down"></i>
-          <i className="cursor-pointer fa-regular fa-heart"></i>
+          <i className="fa-regular fa-thumbs-up cursor-pointer"></i>
+          <i className="fa-regular fa-thumbs-down cursor-pointer"></i>
+          <i className="fa-regular fa-heart cursor-pointer"></i>
         </div>
       </div>
       <p>{challenge}</p>

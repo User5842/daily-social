@@ -1,6 +1,5 @@
-import challenges from "./data/challenges.json";
-
 import ChallengeCard from "./components/ChallengeCard/ChallengeCard";
+import challenges from "./data/challenges.json";
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
         <span className="font-bold">Challenge: </span>
         {challenges[0].challenge}
       </h2>
-      <section className="flex-grow container flex flex-col gap-4">
+      <section className="container flex flex-grow flex-col gap-4">
         <ChallengeCard
           challenge={challenges[0].tiers.accessible.challenge}
           color="green"

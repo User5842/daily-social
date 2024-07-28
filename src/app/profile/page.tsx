@@ -26,7 +26,7 @@ export default function Profile() {
         <div>
           <label htmlFor="email">Enter your email: </label>
           <input
-            className="border p-2 rounded"
+            className="rounded border p-2"
             name="email"
             id="email"
             type="email"
@@ -34,7 +34,7 @@ export default function Profile() {
           />
         </div>
         <div>
-          <button className="bg-black text-white p-2 rounded " type="submit">
+          <button className="rounded bg-black p-2 text-white" type="submit">
             Subscribe
           </button>
         </div>
