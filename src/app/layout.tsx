@@ -20,15 +20,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="container mx-auto flex max-w-prose flex-col gap-4 p-4">
-          <header className="flex items-center justify-between">
+          <header className="flex flex-col items-start justify-between gap-4 sm:flex-row">
             <div>
               <h1 className="text-5xl font-bold">
                 <Link href="/">Daily Social</Link>
               </h1>
               <p>Unique, daily AI challenges to improve your social skills.</p>
             </div>
-            <Link href="/subscribe">
-              <i className="fa-regular fa-circle-user fa-2x"></i>
+            <Link href="/profile">
+              <button className="cursor-pointer rounded border-2 border-black bg-black p-2 text-white">
+                Profile
+              </button>
             </Link>
           </header>
           <hr className="border border-black" />

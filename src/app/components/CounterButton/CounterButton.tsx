@@ -7,7 +7,9 @@ export default function CounterButton({
 }) {
   return (
     <div className="flex max-w-fit items-center justify-between rounded border-2 border-black bg-white">
-      <div className="flex cursor-pointer items-center justify-between gap-1 border-r-2 border-black p-2">
+      <div
+        className={`flex cursor-pointer items-center justify-between gap-1 border-r-2 border-black p-2 hover:bg-red-600`}
+      >
         <i className={`fa-regular fa-${icon}`}></i>
         <p>{text}</p>
       </div>
