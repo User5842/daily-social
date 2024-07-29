@@ -1,3 +1,5 @@
+import { auth } from "@/../auth";
+
 import CounterButton from "../CounterButton/CounterButton";
 
 const colorClasses: Record<string, string> = {
@@ -6,7 +8,7 @@ const colorClasses: Record<string, string> = {
   purple: "bg-purple-600",
 };
 
-export default function ChallengeCard({
+export default async function ChallengeCard({
   challenge,
   color,
   goal,
@@ -20,9 +22,12 @@ export default function ChallengeCard({
   tip: string;
 }) {
   const backgroundColor = colorClasses[color];
+  const session = await auth();
 
   return (
-    <section className={`flex flex-col gap-4 ${backgroundColor} p-4`}>
+    <section
+      className={`flex flex-col gap-4 ${backgroundColor} border-2 border-black p-4`}
+    >
       <div className="flex flex-col gap-2">
         <p className="text-white">
           <span className="font-bold text-white">Challenge: </span>
@@ -41,9 +46,11 @@ export default function ChallengeCard({
           {tip}
         </p>
       </div>
-      <div className="flex justify-end">
-        <CounterButton icon="square-check" text="Complete" />
-      </div>
+      {session != null && (
+        <div className="flex justify-end">
+          <CounterButton icon="square-check" text="Complete" />
+        </div>
+      )}
     </section>
   );
 }
